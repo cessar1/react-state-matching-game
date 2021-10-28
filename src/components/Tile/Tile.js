@@ -1,13 +1,14 @@
-import React from 'react'
+import React from "react";
 
-import './Tile.css'
+import "./Tile.css";
 
-const Tile = () => {
-
+const Tile = ({ selected, matched, color, svg: Svg }) => {
+  const tileColor = selected || matched ? { backGroundColor: color } : null;
   return (
-    <div className='Tile'>
+    <div className='Tile' style={tileColor}>
+      {selected || matched ? <Svg /> : null}
     </div>
-  )
-}
+  );
+};
 
-export default Tile
+export default Tile;
