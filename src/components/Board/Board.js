@@ -4,7 +4,7 @@ import "./Board.css";
 
 const Board = (props) => {
   const tileGrid = props.tiles.map((tile) => {
-    <Tiles {...tile} />;
+    <Tile {...tile} />;
   });
   const gridConfig = {
     gridTemplateColumns: `repeat(${Math.sqrt(props.numTiles)}, 1fr)`,
